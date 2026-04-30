@@ -1,0 +1,58 @@
+/* Estilo da Barra Principal */
+.custom-navbar {
+    background-color: #1a1a1a; /* Um cinza muito escuro, mais moderno que o preto puro */
+    padding: 1rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Container dos links para alinhamento */
+.navbar-nav-container {
+    display: flex;
+    gap: 1.5rem; /* Espaçamento uniforme entre os itens */
+    justify-content: center;
+    width: 100%;
+}
+
+/* Estilo Base dos Links */
+.nav-link-custom {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Pseudo-elemento para a linha animada (substitui o border-bottom rígido) */
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: aquamarine;
+    transition: width 0.3s ease;
+}
+
+/* Hover State */
+.nav-link-custom:hover {
+    color: #fff;
+}
+
+.nav-link-custom:hover::after {
+    width: 100%;
+}
+
+/* Estado Ativo (Angular routerLinkActive) */
+.nav-link-custom.active {
+    color: aquamarine;
+    font-weight: 600;
+}
+
+.nav-link-custom.active::after {
+    width: 100%;
+    background-color: aquamarine;
+}
