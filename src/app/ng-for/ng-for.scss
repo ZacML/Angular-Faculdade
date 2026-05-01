@@ -1,0 +1,73 @@
+// ng-for.scss
+
+// Define o cursor como mãozinha para elementos clicáveis que não são botões nativos
+.cursor-pointer {
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.7; // Efeito visual ao passar o rato
+  }
+}
+
+// Espaçamento para o botão de adicionar
+.btn {
+  margin-bottom: 20px;
+}
+
+// Estilização da Tabela
+table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse; // Remove espaços duplos entre bordas
+  margin-top: 15px;
+  border: 1px solid #dee2e6;
+  font-family: sans-serif;
+
+  tr {
+    &:nth-child(even) {
+      background-color: #f8f9fa; // Cor alternada nas linhas (zebra)
+    }
+
+    &:hover {
+      background-color: #f1f1f1; // Destaque ao passar o rato na linha
+    }
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  // Estilização específica para a coluna de Ações
+  td:last-child {
+    display: flex;
+    gap: 10px; // Espaço entre os ícones bi-check e bi-trash
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Margem para separar os ícones se não usar o gap do flex
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.mr-3 {
+  margin-right: 1rem;
+}
+
+// Estilização do card de detalhes (o *ngIf)
+div[ng-reflect-ng-if] { // Seletor genérico ou crie uma classe .detalhes
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 5px solid #0d6efd; // Cor primary do bootstrap
+  background-color: #e7f1ff;
+  
+  h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+}
