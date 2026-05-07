@@ -6,6 +6,8 @@ import { Pipes } from './pipes/pipes';
 import { NgStyle } from './ng-style/ng-style';
 import { NgModel } from './ng-model/ng-model';
 import { NgClass } from './ng-class/ng-class';
+import { CpPai } from './modulo-teste/cp-pai/cp-pai';
+import { CpPai2 } from './modulo-teste2/cp-pai2/cp-pai2';
 
 export const routes: Routes = [
 
@@ -29,6 +31,13 @@ export const routes: Routes = [
     },
     {path:"pipes", 
      component: Pipes
+    },
+    {path:"cp-pai",
+     component: CpPai
+    },
+    {path:"cp-pai2",
+     component: CpPai2
+
     }
 
 ];
