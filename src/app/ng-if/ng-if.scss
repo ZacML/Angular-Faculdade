@@ -1,0 +1,70 @@
+.divAmarelo {
+    background-color:yellow;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.divVermelho {
+    background-color: red;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.containerPai {
+    display: flex;
+    align-content: space-between;
+}
+
+// ng-if.scss
+
+// Estilização dos botões (Bootstrap utilitários)
+.mr-3 {
+    margin-right: 1rem;
+}
+
+.btn {
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+// Container que envolve os quadrados
+.containerPai {
+    display: flex;
+    flex-wrap: wrap; // Permite que os quadrados quebrem a linha se não houver espaço
+    gap: 15px;      // Cria um espaçamento uniforme entre os elementos filhos
+    margin-top: 20px;
+}
+
+// Estilo base para os quadrados (evita repetição de código)
+%quadrado-base {
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    border: 3px solid #333; // Borda levemente mais escura
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Adiciona uma sombra suave
+    transition: transform 0.3s ease; // Transição suave ao aparecer
+
+    &:hover {
+        transform: scale(1.02); // Efeito leve de zoom ao passar o rato
+    }
+}
+
+.divAmarelo {
+    @extend %quadrado-base;
+    background-color: #ffeb3b; // Um amarelo mais vibrante
+}
+
+.divVermelho {
+    @extend %quadrado-base;
+    background-color: #f44336; // Um vermelho mais moderno
+}

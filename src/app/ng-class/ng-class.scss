@@ -1,0 +1,32 @@
+.preto { 
+  background-color: #1a1a1a;
+  color: #00ffd0; /* Combinando com sua navbar */
+  padding: 40px;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+
+.amarelo {
+  background-color: #ffeb3b;
+  color: #1a1a1a;
+  padding: 40px;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+
+.btn-custom {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: 2px solid #00ffd0;
+  background: #1a1a1a;
+  color: #00ffd0;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  background: #00ffd0;
+  color: #1a1a1a;
+}
