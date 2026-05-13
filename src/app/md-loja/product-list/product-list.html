@@ -1,0 +1,15 @@
+<div class="store-container">
+  <div class="sidebar">
+    <h2>Nossos Produtos</h2>
+    <ul>
+      <li *ngFor="let p of produtos" (click)="selecionar(p)" 
+          [class.active]="produtoSelecionado === p">
+        {{ p.nome }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <app-product-card [produto]="produtoSelecionado"></app-product-card>
+  </div>
+</div>
