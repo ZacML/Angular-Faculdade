@@ -1,0 +1,10 @@
+<h1>Componente B - Listagem</h1>
+<ul>
+  @for (item of lista; track item) {
+    <li>
+      {{ item }}
+    </li>
+  } @empty {
+    <li>A lista está vazia.</li>
+  }
+</ul>

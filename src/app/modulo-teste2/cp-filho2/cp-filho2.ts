@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cp-filho2',
@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class CpFilho2 {
 
+  @Output() public emiteEventoPai = new EventEmitter();
+
+  public sorteiaNumero(){
+    let numero = Math. floor(Math.random() * 100 + 1);
+    this. emiteEventoPai. emit (numero);
+  }
 }

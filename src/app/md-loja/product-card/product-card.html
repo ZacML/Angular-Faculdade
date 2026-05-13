@@ -1,0 +1,13 @@
+<div class="card" *ngIf="produto">
+  <img [src]="produto.imagem" [alt]="produto.nome" class="product-img">
+  <div class="details">
+    <h3>{{ produto.nome }}</h3>
+    <p class="category">Categoria: {{ produto.categoria }}</p>
+    <p class="price">{{ produto.preco | currency:'BRL' }}</p>
+    <p class="description">{{ produto.descricao }}</p>
+  </div>
+</div>
+
+<div *ngIf="!produto" class="empty-state">
+  <p>Selecione um produto para ver os detalhes.</p>
+</div>

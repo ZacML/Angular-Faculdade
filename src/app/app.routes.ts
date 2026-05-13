@@ -8,6 +8,8 @@ import { NgModel } from './ng-model/ng-model';
 import { NgClass } from './ng-class/ng-class';
 import { CpPai } from './modulo-teste/cp-pai/cp-pai';
 import { CpPai2 } from './modulo-teste2/cp-pai2/cp-pai2';
+import { CpAgrupador } from './md-service/cp-agrupador/cp-agrupador';
+import { ProductList } from './md-loja/product-list/product-list';
 
 export const routes: Routes = [
 
@@ -37,7 +39,12 @@ export const routes: Routes = [
     },
     {path:"cp-pai2",
      component: CpPai2
-
+    },
+    {path:"cp-agrupador",
+        component: CpAgrupador
+    },
+    {path:"product-list",
+        component: ProductList
     }
 
 ];
